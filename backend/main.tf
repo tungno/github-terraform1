@@ -16,9 +16,6 @@ terraform {
 
 provider "azurerm" {
   subscription_id = "8fe266af-9a8d-40b0-bcb6-08d23e112c60"
-  tenant_id       = "06fec4e0-87df-4f76-894d-7c5595a731bd"
-  client_id       = "c653048c-5743-4557-8e00-0e92230a3a14"
-  client_secret   = "Ssi8Q~rA4zEm_5AH~Bf1pMx60ut8ehcdErTiBdan"
   features {
     key_vault {
       purge_soft_delete_on_destroy    = true
