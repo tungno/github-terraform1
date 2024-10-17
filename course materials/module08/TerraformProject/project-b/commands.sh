@@ -20,6 +20,7 @@ az storage blob download --account-name sademobackendtim --container-name tfstat
 az storage blob download --account-name sademobackendtim --container-name tfstate --name project_b.tfstate --file project_b.tfstate
 
 # Delete tfstate file from storage account
-az storage blob delete --account-name sademobackendtim --container-name tfstate --name project_a.tfstate
-az storage blob delete --account-name sademobackendtim --container-name tfstate --name project_b.tfstate
+az storage blob delete --account-name sabeftstn3kx9neua2l7 --container-name tfstate-tn3 --name project_a.tfstate
+az storage blob delete --account-name sabeftstn3kx9neua2l7 --container-name tfstate-tn3 --name project_b.tfstate
+
 

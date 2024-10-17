@@ -6,15 +6,15 @@ terraform {
     }
   }
   backend "azurerm" {
-    resource_group_name  = "rg-demo-backend-tim"
-    storage_account_name = "sademobackendtim"
-    container_name       = "tfstate"
+    resource_group_name  = "rg-backend-tn3"
+    storage_account_name = "sabeftstn3kx9neua2l7"
+    container_name       = "tfstate-tn3"
     key                  = "project_b.tfstate"
   }
 }
 
 provider "azurerm" {
-  subscription_id = "5513747a-818d-4f48-83b0-da2b2fd4cb97"
+  subscription_id = "8fe266af-9a8d-40b0-bcb6-08d23e112c60"
   features {
 
   }
@@ -23,4 +23,11 @@ provider "azurerm" {
 resource "azurerm_resource_group" "rg_b" {
   name     = var.resource_group_name
   location = var.location
+}
+
+module "storage" {
+  source               = "../modules/storage"
+  storage_account_name = var.storage_account_name
+  resource_group_name  = azurerm_resource_group.rg_b.name
+  location             = azurerm_resource_group.rg_b.location
 }
